@@ -1,12 +1,10 @@
 package com.example.teran.ui.login
 
 import android.content.Intent
-import android.content.res.ColorStateList
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import androidx.core.widget.addTextChangedListener
 import com.example.teran.R
 import com.example.teran.databinding.ActivityLoginBinding
 import com.example.teran.ui.register.RegisterActivity
