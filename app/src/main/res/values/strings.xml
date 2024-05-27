@@ -1,3 +1,34 @@
 <resources>
     <string name="app_name">Teran</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Invalid password</string>
+    <string name="invalid_length_password">Password must be at least 8 characters</string>
+    <string name="match_password">Password do not match</string>
+    <string name="strong_password">Your password is strong</string>
+    <string name="noLetter_password">Password must contain at least one letter</string>
+    <string name="noDigit_password">Password must contain at least one Digit</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="helperText">Enter password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="no_account">Don’t have an account?</string>
+    <string name="got_account">Already have an account?</string>
+    <string name="register">Register</string>
+    <string name="gender">Gender</string>
+    <string name="DoB">Date of birth</string>
+    <string name="create_password">Create password</string>
+    <string name="confirm_password">Confirm password</string>
+
+    <string-array name="gender_options">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
 </resources>
