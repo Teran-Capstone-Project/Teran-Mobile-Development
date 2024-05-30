@@ -26,6 +26,23 @@
     <string name="DoB">Date of birth</string>
     <string name="create_password">Create password</string>
     <string name="confirm_password">Confirm password</string>
+    <string name="lorem_ipsum">Lorem ipsum</string>
+    <string name="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
+    <string name="date">xx/xx/xxxx</string>
+    <string name="add_title">Add title here...</string>
+    <string name="finish">Finish</string>
+    <string name="add_content">Tell us how your day\'s going...</string>
+
+
+    <string name="submit">Submit</string>
+    <string name="delete_title">Delete Note</string>
+    <string name="message_positive">Yes</string>
+    <string name="message_negative">No</string>
+    <string name="empty">Field can not be blank</string>
+    <string name="message_delete">Are you sure you want to delete this Journal?</string>
+    <string name="added">Note has been successfully added.</string>
+    <string name="changed">Note has been successfully changed.</string>
+    <string name="deleted">Note has been successfully deleted.</string>
 
     <string-array name="gender_options">
         <item>Male</item>
