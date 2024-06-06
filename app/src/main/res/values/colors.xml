@@ -6,5 +6,8 @@
     <color name="pale_orange">#FFECE6</color>
     <color name="red">#FC0000</color>
     <color name="gray">#808080</color>
+    <color name="dark_gray">#49454F</color>
     <color name="strong_helper_text_color">#64FF6B</color>
+    <color name="search_bar_bg">#ECE6F0</color>
+    <color name="stroke_card_view_journal">#ECE6F0</color>
 </resources>
