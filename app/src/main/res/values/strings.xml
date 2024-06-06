@@ -43,9 +43,43 @@
     <string name="added">Note has been successfully added.</string>
     <string name="changed">Note has been successfully changed.</string>
     <string name="deleted">Note has been successfully deleted.</string>
+    <string name="search_my_journal">Search my journal</string>
+    <string name="header">Header</string>
 
     <string-array name="gender_options">
         <item>Male</item>
         <item>Female</item>
     </string-array>
+    <string name="title_activity_home_page">HomePageActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_post">Post</string>
+    <string name="title_profile">Profile</string>
+    <string name="greeting">Hello,</string>
+    <string name="username">Ervan Fadillah</string>
+    <string name="text_title_survey">Let\'s take the survey</string>
+    <string name="text_content_survey">Jawab beberapa pertanyaan dalam beberapa menit, dapatkan hasil dan rekomendasi!.</string>
+    <string name="take_survey">Take Survey</string>
+    <string name="title_quote">Quote of the day</string>
+    <string name="quotes">“Setiap hari adalah langkah maju, tidak peduli seberapa kecil langkah itu. Berbanggalah pada dirimu sendiri karena terus berusaha. Kamu lebih kuat dari yang kamu pikirkan.”</string>
+    <string name="title_journal">Journal</string>
+    <string name="journal_description">Mencatat mood keseharian pengguna, serta melacak kemajuan.</string>
+    <string name="title_meditation">Meditation</string>
+    <string name="meditation_description">"Jernihkan pikiran, tenangkan hati melalui teknik relaksasi "</string>
+    <string name="search_post">Search post</string>
+    <string name="semua">Semua</string>
+    <string name="curhat">Curhat</string>
+    <string name="anonymous">Anonim</string>
+    <string name="comments">12 Comments</string>
+    <string name="time">1 hour ago</string>
+    <string name="arry">Arry Kusuma Putra</string>
+    <string name="name">Name</string>
+    <string name="enter_name">Enter your name</string>
+    <string name="title_settings">Settings</string>
+    <string name="theme">Theme</string>
+    <string name="system_default">System default</string>
+    <string name="log_out">Log out</string>
+    <string name="enter_email">Enter your email</string>
+    <string name="email_example">ervan.bungas38@gmail.com</string>
 </resources>

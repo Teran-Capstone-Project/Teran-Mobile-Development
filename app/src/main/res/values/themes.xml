@@ -1,9 +1,14 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.Teran" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.Teran" parent="Theme.Material3.DayNight">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/orange</item>
+        <item name="android:statusBarColor">@color/orange</item>
     </style>
 
     <style name="Theme.Teran" parent="Base.Theme.Teran" />
+
+    <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/orange</item>
+    </style>
 </resources>

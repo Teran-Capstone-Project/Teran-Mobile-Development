@@ -3,8 +3,8 @@ package com.example.teran.ui.main
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.teran.R
 import com.example.teran.databinding.ActivityMainBinding
+import com.example.teran.ui.home_page.HomePageActivity
 import com.example.teran.ui.journal.JournalActivity
 import com.example.teran.ui.login.LoginActivity
 
@@ -23,6 +23,11 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnToJournal.setOnClickListener {
             val intent = Intent(this, JournalActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnToHomePage.setOnClickListener {
+            val intent = Intent(this, HomePageActivity::class.java)
             startActivity(intent)
         }
     }
