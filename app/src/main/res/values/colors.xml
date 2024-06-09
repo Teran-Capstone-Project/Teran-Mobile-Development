@@ -2,6 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000 </color>.
     <color name="orange">#FC4100</color>
     <color name="pale_orange">#FFECE6</color>
     <color name="red">#FC0000</color>
@@ -9,5 +10,5 @@
     <color name="dark_gray">#49454F</color>
     <color name="strong_helper_text_color">#64FF6B</color>
     <color name="search_bar_bg">#ECE6F0</color>
-    <color name="stroke_card_view_journal">#ECE6F0</color>
+    <color name="stroke_border_gray">#F2F2F2</color>
 </resources>

@@ -38,7 +38,7 @@ class LoginActivity : AppCompatActivity() {
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 val password = s.toString()
-                val passwordLayout = binding.passwordedtLayout
+                val passwordLayout = binding.passwordEdtLayout
 
                 when {
                     password.length < 8 -> { //if password below 8 character

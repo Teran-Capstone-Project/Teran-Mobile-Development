@@ -2,7 +2,6 @@ package com.example.teran.ui.register
 
 import android.app.DatePickerDialog
 import android.content.Intent
-import android.content.res.ColorStateList
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -33,7 +32,7 @@ class RegisterActivity : AppCompatActivity() {
     private fun moveToLogin() {
         binding.loginLink.setOnClickListener {
         val intent = Intent(this, LoginActivity::class.java)
-        startActivity(intent)
+            startActivity(intent)
         }
     }
 

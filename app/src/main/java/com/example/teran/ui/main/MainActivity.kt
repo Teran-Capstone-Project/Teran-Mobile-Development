@@ -7,6 +7,7 @@ import com.example.teran.databinding.ActivityMainBinding
 import com.example.teran.ui.home_page.HomePageActivity
 import com.example.teran.ui.journal.JournalActivity
 import com.example.teran.ui.login.LoginActivity
+import com.example.teran.ui.register.RegisterActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,18 +17,20 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.hide()
+
+        binding.btnToGuest.setOnClickListener {
+            val intent = Intent(this, HomePageActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.btnToLogin.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
 
-        binding.btnToJournal.setOnClickListener {
-            val intent = Intent(this, JournalActivity::class.java)
-            startActivity(intent)
-        }
-
-        binding.btnToHomePage.setOnClickListener {
-            val intent = Intent(this, HomePageActivity::class.java)
+        binding.btnToRegister.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
     }

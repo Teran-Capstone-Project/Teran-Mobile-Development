@@ -64,9 +64,9 @@
     <string name="title_quote">Quote of the day</string>
     <string name="quotes">“Setiap hari adalah langkah maju, tidak peduli seberapa kecil langkah itu. Berbanggalah pada dirimu sendiri karena terus berusaha. Kamu lebih kuat dari yang kamu pikirkan.”</string>
     <string name="title_journal">Journal</string>
-    <string name="journal_description">Mencatat mood keseharian pengguna, serta melacak kemajuan.</string>
+    <string name="journal_description">Catatlah suasana hatimu sepanjang hari dan pantau perkembanganmu.</string>
     <string name="title_meditation">Meditation</string>
-    <string name="meditation_description">"Jernihkan pikiran, tenangkan hati melalui teknik relaksasi "</string>
+    <string name="meditation_description">Gunakan pengatur waktu dan dengarkan musik meditasi yang menenangkan.</string>
     <string name="search_post">Search post</string>
     <string name="semua">Semua</string>
     <string name="curhat">Curhat</string>
@@ -82,4 +82,21 @@
     <string name="log_out">Log out</string>
     <string name="enter_email">Enter your email</string>
     <string name="email_example">ervan.bungas38@gmail.com</string>
+    <string name="continue_as_guest">Continue as guest</string>
+    <string name="ceritakan_hari_kamu">Ceritakan Hari Kamu</string>
+    <string name="add">Tambah</string>
+    <string name="bahagia">Bahagia 😄</string>
+    <string name="tenang">Tenang ☺</string>
+    <string name="netral">Netral 🙂</string>
+    <string name="cemas">Cemas 😞</string>
+    <string name="sedih">Sedih 😭</string>
+    <string name="date_example">Selasa, 26 Juni 2004</string>
+    <string name="update">Perbarui</string>
+    <!--  MESSAGE  -->
+    <string name="message_isi_jurnal">Isi Jurnal Kamu Ya</string>
+    <string name="message_hapus_jurnal">Berhasil Menghapus Jurnal Kamu</string>
+    <string name="message_tambah_jurnal">Berhasil Menambahkan Jurnal Kamu</string>
+    <string name="message_memperbarui_jurnal">Berhasil Memperbarui Jurnal Kamu</string>
+    <string name="message_ajakan_isi_jurnal">Isi Jurnal Kamu Yuk!</string>
+    <string name="cari_jurnal_kamu">Cari Jurnal Kamu</string>
 </resources>

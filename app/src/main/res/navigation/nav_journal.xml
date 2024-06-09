@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_journal"
+    app:startDestination="@id/journalFragment">
+
+    <fragment
+        android:id="@+id/journalFragment"
+        android:name="com.example.teran.ui.journal.fragment.JournalFragment"
+        android:label="fragment_journal"
+        tools:layout="@layout/fragment_journal" >
+        <action
+            android:id="@+id/action_journalFragment_to_addJournalFragment"
+            app:destination="@id/addJournalFragment" />
+        <action
+            android:id="@+id/action_journalFragment_to_editJournalFragment"
+            app:destination="@id/editJournalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addJournalFragment"
+        android:name="com.example.teran.ui.journal.fragment.AddJournalFragment"
+        android:label="fragment_add_journal"
+        tools:layout="@layout/fragment_add_journal" >
+        <action
+            android:id="@+id/action_addJournalFragment_to_journalFragment"
+            app:destination="@id/journalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editJournalFragment"
+        android:name="com.example.teran.ui.journal.fragment.EditJournalFragment"
+        android:label="fragment_edit_journal"
+        tools:layout="@layout/fragment_edit_journal" >
+        <action
+            android:id="@+id/action_editJournalFragment_to_journalFragment"
+            app:destination="@id/journalFragment" />
+    </fragment>
+</navigation>

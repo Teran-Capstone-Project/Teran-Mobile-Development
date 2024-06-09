@@ -7,50 +7,82 @@
     android:background="@color/white"
     tools:context=".ui.journal.JournalActivity">
 
-    <com.google.android.material.search.SearchBar
-        android:id="@+id/journalSearchBar"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/journalSearchCard"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/search_bar_bg"
-        android:hint="@string/search_my_journal"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        app:cardCornerRadius="30dp"
+        app:strokeWidth="0dp"
+        android:backgroundTint="@color/stroke_border_gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/journalSearchView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="16dp"
+            android:paddingHorizontal="-16dp"
+            app:iconifiedByDefault="false"
+            app:queryBackground="@color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:queryHint="@string/cari_jurnal_kamu" />
+    </com.google.android.material.card.MaterialCardView>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/journalRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginHorizontal="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.843"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/journalSearchBar"
-        app:layout_constraintVertical_bias="0.0"
-        tools:listitem="@layout/list_item_journal" />
-
-    <ProgressBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toBottomOf="@+id/journalSearchCard"
+        tools:listitem="@layout/item_journal" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_journal"
+        android:id="@+id/fab_addJournal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="34dp"
+        android:layout_margin="16dp"
         android:backgroundTint="@color/pale_orange"
         android:src="@drawable/baseline_add_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:maxImageSize="40dp"
-        app:tint="@color/orange"/>
+        app:tint="@color/orange" />
 
+    <ImageView
+        android:id="@+id/journalEmptyImage"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:visibility="gone"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/journalSearchCard"
+        app:srcCompat="@drawable/journal_illustration2" />
 
+    <TextView
+        android:id="@+id/journalEmptyMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="@string/message_ajakan_isi_jurnal"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/journalEmptyImage" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

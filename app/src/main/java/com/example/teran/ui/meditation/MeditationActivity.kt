@@ -12,5 +12,12 @@ class MeditationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMeditationBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        supportActionBar?.apply {
+            elevation = 0.0f
+            title = "Meditation"
+
+            setDisplayHomeAsUpEnabled(true)
+        }
     }
 }

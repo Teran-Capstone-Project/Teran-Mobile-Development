@@ -3,12 +3,33 @@
     <style name="Base.Theme.Teran" parent="Theme.Material3.DayNight">
         <!-- Customize your light theme here. -->
         <item name="colorPrimary">@color/orange</item>
+        <item name="colorSecondaryContainer">@color/pale_orange</item>
+        <item name="colorOnSecondaryContainer">@color/orange</item>
+        <item name="colorSurfaceContainer">@color/white</item>
+
+        <item name="android:windowBackground">@color/white</item>
+
         <item name="android:statusBarColor">@color/orange</item>
+
+        <item name="titleTextColor">@color/orange</item>
+
     </style>
 
     <style name="Theme.Teran" parent="Base.Theme.Teran" />
 
+    <style name="BottomNavViewActiveLabel" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textColor">@color/orange</item>
+    </style>
+
     <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
         <item name="android:color">@color/orange</item>
+    </style>
+
+    <!-- BUTTON  -->
+    <style name="StrokeBorderGrayButton">
+        <item name="strokeColor">@color/stroke_border_gray</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:textColor">@color/orange</item>
+        <item name="backgroundTint">@color/white</item>
     </style>
 </resources>

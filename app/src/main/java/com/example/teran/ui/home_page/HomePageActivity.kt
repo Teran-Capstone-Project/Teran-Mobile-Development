@@ -1,8 +1,8 @@
 package com.example.teran.ui.home_page
 
+import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
@@ -11,6 +11,8 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.teran.R
 import com.example.teran.databinding.ActivityHomePageBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
+
 
 class HomePageActivity : AppCompatActivity() {
 
@@ -23,6 +25,7 @@ class HomePageActivity : AppCompatActivity() {
 
         supportActionBar?.apply {
             setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this@HomePageActivity, R.color.white)))
+            elevation = 0.0f
         }
 
         val navView: BottomNavigationView = binding.navView
