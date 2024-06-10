@@ -1,0 +1,10 @@
+<!-- res/drawable/circle_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <gradient
+        android:startColor="@color/orange"
+        android:centerColor="@color/min_orange"
+        android:endColor="@color/center_orange"/>
+    <size android:width="200dp"
+        android:height="200dp"/>
+</shape>
