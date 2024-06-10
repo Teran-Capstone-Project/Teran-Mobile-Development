@@ -99,4 +99,10 @@
     <string name="message_memperbarui_jurnal">Berhasil Memperbarui Jurnal Kamu</string>
     <string name="message_ajakan_isi_jurnal">Isi Jurnal Kamu Yuk!</string>
     <string name="cari_jurnal_kamu">Cari Jurnal Kamu</string>
+    <string name="time_left">sec time left</string>
+    <string name="start">Start</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Resume</string>
+    <string name="timer_text">+15s</string>
+    <string name="set">Set</string>
 </resources>

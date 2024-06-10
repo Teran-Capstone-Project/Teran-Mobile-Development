@@ -43,6 +43,8 @@ android {
 
 dependencies {
 
+    //Glide
+    implementation("com.github.bumptech.glide:glide:4.16.0")
 
     //Room
     implementation("androidx.room:room-runtime:2.5.2")
