@@ -37,7 +37,8 @@ android {
     }
     buildFeatures {
         viewBinding = true
-        
+        mlModelBinding = true
+
     }
 }
 
@@ -52,12 +53,18 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
     implementation("androidx.activity:activity:1.9.0")
+    implementation("org.tensorflow:tensorflow-lite-support:0.1.0")
+    implementation("org.tensorflow:tensorflow-lite-metadata:0.1.0")
+    implementation("org.tensorflow:tensorflow-lite-gpu:2.3.0")
     ksp("androidx.room:room-compiler:2.5.2")
 
     //Livedata & ViewModel
     implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.8.0")
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.0")
     implementation("androidx.activity:activity-ktx:1.9.0")
+
+    // CircleImageView
+    implementation("de.hdodenhof:circleimageview:3.1.0")
 
     implementation("androidx.core:core-ktx:1.13.0")
     implementation("androidx.appcompat:appcompat:1.6.1")

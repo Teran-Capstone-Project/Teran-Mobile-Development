@@ -74,7 +74,7 @@
     <string name="comments">12 Comments</string>
     <string name="time">1 hour ago</string>
     <string name="arry">Arry Kusuma Putra</string>
-    <string name="name">Name</string>
+    <string name="name">Nama</string>
     <string name="enter_name">Enter your name</string>
     <string name="title_settings">Settings</string>
     <string name="theme">Theme</string>
@@ -98,6 +98,7 @@
     <string name="message_tambah_jurnal">Berhasil Menambahkan Jurnal Kamu</string>
     <string name="message_memperbarui_jurnal">Berhasil Memperbarui Jurnal Kamu</string>
     <string name="message_ajakan_isi_jurnal">Isi Jurnal Kamu Yuk!</string>
+    <!--    -->
     <string name="cari_jurnal_kamu">Cari Jurnal Kamu</string>
     <string name="time_left">sec time left</string>
     <string name="start">Start</string>
@@ -105,4 +106,9 @@
     <string name="resume">Resume</string>
     <string name="timer_text">+15s</string>
     <string name="set">Set</string>
+    <string name="_00s">00s</string>
+    <!--  ACTION  -->
+    <string name="simpan">Simpan</string>
+    <string name="batal">Batal</string>
+    <string name="jenis_kelamin">Jenis Kelamin</string>
 </resources>
