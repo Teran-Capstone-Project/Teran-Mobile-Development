@@ -1,4 +1,4 @@
-package com.example.teran.data.helper
+package com.example.teran.ui.journal
 
 import androidx.recyclerview.widget.DiffUtil
 import com.example.teran.data.model.Journal

@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.example.teran.data.helper.JournalDiffCallback
 import com.example.teran.data.model.Journal
 import com.example.teran.databinding.ItemJournalBinding
 
