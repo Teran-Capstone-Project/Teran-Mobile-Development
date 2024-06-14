@@ -47,9 +47,67 @@
     <string name="header">Header</string>
 
     <string-array name="gender_options">
-        <item>Male</item>
-        <item>Female</item>
+        <item>Pria</item>
+        <item>Wanita</item>
     </string-array>
+
+    <string-array name="major_options">
+        <item>"Teknik Mesin"</item>
+        <item>Pendidikan Agama Islam</item>
+        <item>Hukum</item>
+        <item>Matematika</item>
+        <item>Teknik Elektro</item>
+        <item>Ilmu Komputer</item>
+        <item>Biologi</item>
+        <item>Teknik Perkapalan</item>
+        <item>Gizi Klinik</item>
+        <item>Akuntansi</item>
+        <item>Kedokteran</item>
+        <item>Fisika</item>
+        <item>Ilmu Kelautan</item>
+        <item>Manajemen</item>
+        <item>Perbankan</item>
+        <item>Administrasi Bisnis</item>
+        <item>Olahraga</item>
+        <item>Teknik Sipil</item>
+        <item>Ilmu Biomedis</item>
+        <item>Pertanian</item>
+        <item>Kehutanan</item>
+        <item>Keperawatan</item>
+        <item>Ilmu Pengetahuan Manusia</item>
+        <item>Statistika</item>
+        <item>Kebidanan</item>
+        <item>Astronomi</item>
+        <item>Ilmu Perpustakaan</item>
+        <item>Pendidikan Islam</item>
+        <item>Aktuaria</item>
+        <item>Bahasa Arab</item>
+        <item>Bahasa Mandarin</item>
+        <item>Bahasa Inggris</item>
+        <item>Teknik Geodesi</item>
+        <item>Teknik Industri</item>
+        <item>Teknik Geologi</item>
+        <item>Ilmu Gizi</item>
+        <item>Teknik Metalurgi</item>
+        <item>Ekonomi</item>
+        <item>Teknik Fisika</item>
+        <item>Kimia</item>
+        <item>Teknik Kelautan</item>
+        <item>Administrasi Perkantoran</item>
+        <item>Farmasi</item>
+        <item>Teknik Kimia</item>
+        <item>Arsitektur</item>
+        <item>Bisnis Digital</item>
+    </string-array>
+
+    <string-array name="grade_options">
+        <item>3.00–3.49</item>
+        <item>3.50–4.00</item>
+        <item>2.50–2.99</item>
+        <item>2.00–2.49</item>
+        <item>0–1.99</item>
+    </string-array>
+
     <string name="title_activity_home_page">HomePageActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
@@ -112,4 +170,13 @@
     <string name="batal">Batal</string>
     <string name="jenis_kelamin">Jenis Kelamin</string>
     <string name="mulai">Mulai</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+    <string name="outOf">1/10</string>
+    <string name="major">Jurusan</string>
+    <string name="grade">IPK</string>
+    <string name="age">Umur</string>
+    <string name="year">Tahun studi</string>
 </resources>

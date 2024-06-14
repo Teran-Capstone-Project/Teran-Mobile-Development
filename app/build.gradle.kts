@@ -44,6 +44,12 @@ android {
 
 dependencies {
 
+    //viewPager
+    implementation("androidx.viewpager2:viewpager2:1.0.0")
+
+    //circle Indicator
+    implementation ("me.relex:circleindicator:2.1.6")
+
     //Glide
     implementation("com.github.bumptech.glide:glide:4.16.0")
 
