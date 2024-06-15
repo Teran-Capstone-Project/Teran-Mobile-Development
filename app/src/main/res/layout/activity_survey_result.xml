@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.survey.SurveyResultActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/stressResultImage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/stress_illustration" />
+
+        <TextView
+            android:id="@+id/stressResultTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/orange"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/stressResultImage"
+            app:layout_constraintTop_toBottomOf="@+id/stressResultImage"
+            tools:text="Kamu mengalami stress dengan probabilitas 97%" />
+
+        <TextView
+            android:id="@+id/stressRsultDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/stressResultTitle"
+            app:layout_constraintStart_toStartOf="@+id/stressResultTitle"
+            app:layout_constraintTop_toBottomOf="@+id/stressResultTitle"
+            tools:text="Salah satu pendekatan efektif untuk menangani stress kamu adalah dengan menjaga rutinitas harian yang seimbang. Pastikan untuk menyertakan aktivitas fisik secara teratur, seperti berjalan kaki atau berolahraga, karena aktivitas fisik dapat melepaskan endorfin yang meningkatkan suasana hati. Selain itu, praktikkan teknik relaksasi seperti meditasi atau yoga untuk membantu menenangkan pikiran. Penting juga untuk memastikan tidur yang cukup dan berkualitas, karena kurang tidur dapat memperburuk stres. Manajemen waktu yang baik dan menetapkan batasan yang sehat dalam kehidupan pribadi dan profesional juga penting untuk mencegah stres semakin parah." />
+
+        <Button
+            android:id="@+id/surveyResultFinishBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:text="Halaman Utama"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/stressRsultDesc"
+            app:layout_constraintStart_toStartOf="@+id/stressRsultDesc"
+            app:layout_constraintTop_toBottomOf="@+id/stressRsultDesc" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -77,4 +77,8 @@ dependencies {
     // Tensor Flow Lite
     implementation("com.google.android.gms:play-services-tflite-java:16.1.0")
     implementation("com.google.android.gms:play-services-tflite-gpu:16.2.0")
+
+    // Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
 }

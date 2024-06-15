@@ -46,10 +46,6 @@
     <string name="search_my_journal">Search my journal</string>
     <string name="header">Header</string>
 
-    <string-array name="gender_options">
-        <item>Male</item>
-        <item>Female</item>
-    </string-array>
     <string name="title_activity_home_page">HomePageActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
@@ -59,7 +55,7 @@
     <string name="greeting">Hello,</string>
     <string name="username">Ervan Fadillah</string>
     <string name="text_title_survey">Let\'s take the survey</string>
-    <string name="text_content_survey">Jawab beberapa pertanyaan dalam beberapa menit, dapatkan hasil dan rekomendasi!.</string>
+    <string name="text_content_survey">Jawab beberapa pertanyaan, dapatkan hasil dan rekomendasi!.</string>
     <string name="take_survey">Take Survey</string>
     <string name="title_quote">Quote of the day</string>
     <string name="quotes">“Setiap hari adalah langkah maju, tidak peduli seberapa kecil langkah itu. Berbanggalah pada dirimu sendiri karena terus berusaha. Kamu lebih kuat dari yang kamu pikirkan.”</string>
@@ -112,4 +108,86 @@
     <string name="batal">Batal</string>
     <string name="jenis_kelamin">Jenis Kelamin</string>
     <string name="mulai">Mulai</string>
+
+    <!--  ARRAY  -->
+    <string-array name="umur_array">
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+    </string-array>
+    <string-array name="gender_options">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string-array name="jurusan_array">
+        <item>Administrasi Bisnis</item>
+        <item>Administrasi Perkantoran</item>
+        <item>Akuntansi</item>
+        <item>Aktuaria</item>
+        <item>Arsitektur</item>
+        <item>Astronomi</item>
+        <item>Bahasa Arab</item>
+        <item>Bahasa Inggris</item>
+        <item>Bahasa Mandarin</item>
+        <item>Biologi</item>
+        <item>Bioteknologi</item>
+        <item>Bisnis Digital</item>
+        <item>ekonomi</item>
+        <item>Ekonomi</item>
+        <item>Farmasi</item>
+        <item>Fisika</item>
+        <item>Gizi Klinik</item>
+        <item>Hukum</item>
+        <item>Ilmu Gizi</item>
+        <item>Ilmu Kelautan</item>
+        <item>Ilmu Komputer</item>
+        <item>Ilmu Pengetahuan Manusia</item>
+        <item>Ilmu Perpustakaan</item>
+        <item>Ilmu biomedis</item>
+        <item>Kebidanan</item>
+        <item>Kedokteran</item>
+        <item>Kehutanan</item>
+        <item>Keperawatan</item>
+        <item>Kimia</item>
+        <item>Komunikasi</item>
+        <item>Manajemen</item>
+        <item>Matematika</item>
+        <item>Mesin</item>
+        <item>Olahraga</item>
+        <item>Pendidikan Agama Islam</item>
+        <item>Pendidikan Islam</item>
+        <item>Perbankan</item>
+        <item>Pertanian</item>
+        <item>Statistika</item>
+        <item>Teknik Elektro</item>
+        <item>Teknik Fisika</item>
+        <item>Teknik Geodesi</item>
+        <item>Teknik Geologi</item>
+        <item>Teknik Industri</item>
+        <item>Teknik Kelautan</item>
+        <item>Teknik Kimia</item>
+        <item>Teknik Mesin</item>
+        <item>Teknik Metalurgi</item>
+        <item>Teknik Perkapalan</item>
+        <item>Teknik Sipil</item>
+    </string-array>
+    <string-array name="tahun_studi_array">
+        <item>1 Tahun</item>
+        <item>2 Tahun</item>
+        <item>3 Tahun</item>
+        <item>4 Tahun</item>
+        <item>5 Tahun</item>
+        <item>6 Tahun</item>
+    </string-array>
+    <string-array name="ipk_array">
+        <item>0 - 1.99</item>
+        <item>2.00 - 2.49</item>
+        <item>2.50 - 2.99</item>
+        <item>3.00 - 3.49</item>
+        <item>3.50 - 4.00</item>
+    </string-array>
 </resources>

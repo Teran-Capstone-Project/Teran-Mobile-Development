@@ -120,7 +120,7 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun setupGenderDropdown() {
         val genderOptions = resources.getStringArray(R.array.gender_options)
-        val adapter = ArrayAdapter(this, R.layout.list_item_gender, genderOptions)
+        val adapter = ArrayAdapter(this, R.layout.list_item, genderOptions)
         binding.autoCompleteText.setAdapter(adapter)
     }
 }

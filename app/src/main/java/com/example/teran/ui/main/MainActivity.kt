@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnToGuest.setOnClickListener {
             val intent = Intent(this, HomePageActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(intent)
         }
 
