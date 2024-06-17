@@ -17,7 +17,7 @@
     <string name="login">Login</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
-    <string name="helperText">Enter password</string>
+
     <string name="forgot_password">Forgot password?</string>
     <string name="no_account">Don’t have an account?</string>
     <string name="got_account">Already have an account?</string>
@@ -52,7 +52,7 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_post">Post</string>
     <string name="title_profile">Profile</string>
-    <string name="greeting">Hello,</string>
+    <string name="greeting">Halo,</string>
     <string name="username">Ervan Fadillah</string>
     <string name="text_title_survey">Let\'s take the survey</string>
     <string name="text_content_survey">Jawab beberapa pertanyaan, dapatkan hasil dan rekomendasi!.</string>
@@ -76,7 +76,6 @@
     <string name="theme">Theme</string>
     <string name="system_default">System default</string>
     <string name="log_out">Log out</string>
-    <string name="enter_email">Enter your email</string>
     <string name="email_example">ervan.bungas38@gmail.com</string>
     <string name="continue_as_guest">Continue as guest</string>
     <string name="ceritakan_hari_kamu">Ceritakan Hari Kamu</string>
@@ -103,11 +102,18 @@
     <string name="timer_text">+15s</string>
     <string name="set">Set</string>
     <string name="_00s">00s</string>
+    <!--  INPUT MESSAGE  -->
+    <string name="invalid_format_email">Invalid email format</string>
+    <string name="enter_password">Silahkan masukkan password Anda</string>
+    <string name="enter_email">Silahkan masukkan email Anda</string>
+
     <!--  ACTION  -->
     <string name="simpan">Simpan</string>
     <string name="batal">Batal</string>
     <string name="jenis_kelamin">Jenis Kelamin</string>
     <string name="mulai">Mulai</string>
+    <string name="login_dulu_yuk">Login Dulu Yuk!</string>
+    <string name="jadi_anonim">Jadi Anonim</string>
 
     <!--  ARRAY  -->
     <string-array name="umur_array">

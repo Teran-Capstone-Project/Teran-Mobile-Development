@@ -1,6 +1,7 @@
 package com.example.teran.ui.survey
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
@@ -27,6 +28,8 @@ class SurveyQuestionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySurveyQuestionBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
         supportActionBar?.apply {
             elevation = 0.0f

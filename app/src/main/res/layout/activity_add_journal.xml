@@ -86,6 +86,10 @@
                 android:layout_height="match_parent"
                 android:gravity="top"
                 android:hint="@string/ceritakan_hari_kamu"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:overScrollMode="always"
                 android:minLines="6" />
         </com.google.android.material.textfield.TextInputLayout>
 

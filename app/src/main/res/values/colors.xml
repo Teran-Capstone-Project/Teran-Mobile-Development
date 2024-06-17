@@ -13,4 +13,8 @@
     <color name="strong_helper_text_color">#64FF6B</color>
     <color name="search_bar_bg">#ECE6F0</color>
     <color name="stroke_border_gray">#F2F2F2</color>
+    <color name="stroke_border_dark">#1C1C1C</color>
+    <color name="dark">#121212</color>
+    <color name="loading_bg">#80000000</color>
+    <color name="shimmer">#C2C2C2</color>
 </resources>

@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.teran.data.sharedpref.MySharedPreferences
 import com.example.teran.databinding.FragmentHomeBinding
 import com.example.teran.ui.journal.JournalActivity
 import com.example.teran.ui.meditation.MeditationActivity
@@ -18,12 +19,13 @@ class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
     private val homeViewModel by lazy {
         ViewModelProvider(this).get(HomeViewModel::class.java)
     }
+
+    private lateinit var sharedPref: MySharedPreferences
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -32,15 +34,16 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        sharedPref = MySharedPreferences(requireActivity())
+
         val cardViewSurvey: CardView = binding.cardView
         val cardViewJournal: CardView = binding.cardViewJournal
         val cardViewMeditation: CardView = binding.cardViewMeditation
 
-        val user: TextView = binding.textUsernameHome
+        val usernameHome: TextView = binding.textUsernameHome
         val quoteOfTheDay: TextView = binding.textQuoteContent
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            user.text = it
-        }
+
+        usernameHome.text = sharedPref.getUser().name ?: "Orang Sukses"
 
         homeViewModel.quote.observe(viewLifecycleOwner) {
             quoteOfTheDay.text = it

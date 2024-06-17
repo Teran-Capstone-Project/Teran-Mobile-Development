@@ -7,6 +7,7 @@ import android.view.View
 import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.teran.data.viewmodel.ViewModelFactory
 import com.example.teran.databinding.ActivityJournalBinding
 
@@ -102,7 +103,8 @@ class JournalActivity : AppCompatActivity() {
         adapter = JournalAdapter()
 
         binding.apply {
-            journalRecyclerView.layoutManager = LinearLayoutManager(this@JournalActivity)
+//            journalRecyclerView.layoutManager = LinearLayoutManager(this@JournalActivity)
+            journalRecyclerView.layoutManager = StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL)
             journalRecyclerView.setHasFixedSize(true)
             journalRecyclerView.adapter = adapter
         }
