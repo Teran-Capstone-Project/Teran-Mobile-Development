@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -81,6 +82,16 @@
             app:layout_constraintBottom_toBottomOf="@+id/commentsSizePost"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/commentsSizePost" />
+
+        <ImageView
+            android:id="@+id/favoritePostBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/usernamePost"
+            app:layout_constraintEnd_toEndOf="@+id/descPost"
+            app:layout_constraintTop_toTopOf="@+id/usernamePost"
+            app:srcCompat="@drawable/ic_favorite_border"
+            app:tint="@color/gray" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

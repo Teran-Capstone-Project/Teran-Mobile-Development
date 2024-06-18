@@ -114,6 +114,8 @@
     <string name="mulai">Mulai</string>
     <string name="login_dulu_yuk">Login Dulu Yuk!</string>
     <string name="jadi_anonim">Jadi Anonim</string>
+    <string name="komentar">Komentar</string>
+    <string name="tambah_komentar">Tambah Komentar</string>
 
     <!--  ARRAY  -->
     <string-array name="umur_array">

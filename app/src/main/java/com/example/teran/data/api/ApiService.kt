@@ -7,11 +7,13 @@ import com.example.teran.data.api.response.auth.LoginResponse
 import com.example.teran.data.api.response.auth.RegisterResponse
 import com.example.teran.data.api.response.post.AddPostResponse
 import com.example.teran.data.api.response.post.GetAllPostsResponse
+import com.example.teran.data.api.response.post.GetPostResponse
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.POST
+import retrofit2.http.Path
 
 interface ApiService {
 
@@ -37,4 +39,10 @@ interface ApiService {
         @Header("Authorization") token: String,
         @Body addPostRequest: AddPostRequest
     ) : Call<AddPostResponse>
+
+    @GET("posts/{postID}")
+    fun getAllPostComments(
+        @Header("Authorization") token: String,
+        @Path("postID") postId: String
+    ) : Call<GetPostResponse>
 }
