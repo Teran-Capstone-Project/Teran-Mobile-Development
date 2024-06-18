@@ -19,9 +19,6 @@
             android:name=".ui.home_page.post.favorite.FavoritePostActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.home_page.post.favorite.FavoriteActivity"
-            android:exported="false" />
-        <activity
             android:name=".ui.home_page.post.detail.DetailPostActivity"
             android:exported="false" />
         <activity
