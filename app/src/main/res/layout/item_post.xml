@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemPostCard"
+    app:cardCornerRadius="8dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginHorizontal="16dp"
+    android:backgroundTint="@color/white"
+    app:strokeColor="@color/stroke_border_gray">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/profilePicturePost"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/profile_example"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/usernamePost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/anonymous"
+            android:layout_marginStart="12dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/profilePicturePost"
+            app:layout_constraintStart_toEndOf="@+id/profilePicturePost"
+            app:layout_constraintTop_toTopOf="@id/profilePicturePost" />
+
+        <TextView
+            android:id="@+id/descPost"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:text="@string/description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/profilePicturePost"
+            app:layout_constraintTop_toBottomOf="@+id/profilePicturePost" />
+
+        <ImageView
+            android:id="@+id/comment_imageView"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/baseline_comment_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descPost" />
+
+        <TextView
+            android:id="@+id/commentsSizePost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/comments"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/comment_imageView"
+            app:layout_constraintStart_toEndOf="@+id/comment_imageView"
+            app:layout_constraintTop_toTopOf="@+id/comment_imageView" />
+
+        <TextView
+            android:id="@+id/datePost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@+id/commentsSizePost"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/commentsSizePost" />
+
+        <ImageView
+            android:id="@+id/favoritePostBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/usernamePost"
+            app:layout_constraintEnd_toEndOf="@+id/descPost"
+            app:layout_constraintTop_toTopOf="@+id/usernamePost"
+            app:srcCompat="@drawable/ic_favorite_border"
+            app:tint="@color/gray" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

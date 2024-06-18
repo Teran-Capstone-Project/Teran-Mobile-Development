@@ -8,11 +8,6 @@ import java.util.Calendar
 
 class HomeViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "Ervan Fadillah"
-    }
-    val text: LiveData<String> = _text
-
     private val _quote = MutableLiveData<String>()
 
     private var lastUpdatedDate: Long = 0L

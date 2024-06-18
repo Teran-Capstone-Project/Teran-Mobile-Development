@@ -1,23 +1,33 @@
 package com.example.teran.ui.home_page.profile
 
 import android.content.DialogInterface
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.teran.R
+import com.example.teran.data.sharedpref.MySharedPreferences
 import com.example.teran.databinding.FragmentProfileBinding
+import com.example.teran.ui.main.MainActivity
 import com.google.android.material.textfield.TextInputEditText
+import coil.ImageLoader
+import coil.decode.SvgDecoder
+import coil.request.ImageRequest
+import coil.request.ImageResult
+import com.example.teran.ui.login.LoginActivity
+import com.example.teran.ui.register.RegisterActivity
 
 class ProfileFragment : Fragment() {
 
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
+
+    private lateinit var sharedPref: MySharedPreferences
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -30,51 +40,67 @@ class ProfileFragment : Fragment() {
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        sharedPref = MySharedPreferences(requireActivity())
 
-        binding.nameCard.setOnClickListener {
-            val editTextLayout = LayoutInflater.from(requireActivity()).inflate(R.layout.layout_edit_text, null)
-            val editText = editTextLayout.findViewById<TextInputEditText>(R.id.editText)
-            editText.setText(getString(R.string.arry))
-            editText.hint = "Nama Kamu"
+        if (sharedPref.getUser().token != null) {
+            binding.displayAuth.visibility = View.VISIBLE
 
-            val dialog = AlertDialog.Builder(requireActivity())
-                .setTitle("Nama Kamu")
-                .setView(editTextLayout)
-                .setPositiveButton(R.string.simpan, DialogInterface.OnClickListener { dialog, which ->
-                    showToast(editText.text.toString())
-                })
-                .setNegativeButton(R.string.batal, DialogInterface.OnClickListener { dialog, which ->
-                })
+            setPicture()
+            setUsername()
+            setLogoutBtn()
+        } else {
+            binding.displayGuest.visibility = View.VISIBLE
 
-            dialog.show()
-        }
-
-        binding.genderCard.setOnClickListener {
-            // Memberikan nilai default index 0
-            var indexGenderSelected = 0
-            // Menyiapkan daftar data jenis kelamin
-            val listGender = arrayOf("Laki-Laki", "Perempuan")
-            // Memilih gender sesuai index atau nilai jenis kelamin
-            var genderSelected = listGender[indexGenderSelected]
-
-            val dialog = AlertDialog.Builder(requireActivity())
-                .setTitle("Pilih Jenis Kelamin")
-                .setSingleChoiceItems(listGender, 0) { dialog, which ->
-                    // Mengubah nilai index sesuai dengan pilihan pengguna
-                    indexGenderSelected = which
-                    // Mengubah nilai genderSelected dengan pilihan pengguna
-                    genderSelected = listGender[indexGenderSelected]
-                }
-                .setPositiveButton(R.string.simpan, DialogInterface.OnClickListener { dialog, which ->
-                    showToast(genderSelected)
-                })
-                .setNegativeButton(R.string.batal, DialogInterface.OnClickListener { dialog, which ->
-                })
-
-            dialog.show()
+            setLoginBtn()
+            setRegisterBtn()
         }
 
         return root
+    }
+
+    private fun setPicture() {
+        val imageLoader = ImageLoader.Builder(requireActivity())
+            .components {
+                add(SvgDecoder.Factory())
+            }
+            .build()
+
+        val imageRequest = ImageRequest.Builder(requireActivity())
+            .data(sharedPref.getUser().profilePicture)
+            .target(binding.imageProfile)
+            .build()
+
+        imageLoader.enqueue(imageRequest)
+    }
+
+    private fun setUsername() {
+        binding.nameValue.text = sharedPref.getUser().name
+    }
+
+    private fun setLogoutBtn() {
+        binding.logoutBtn.setOnClickListener {
+            sharedPref.clear()
+
+            val intent = Intent(requireActivity(), MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+
+            showToast("Berhasil Logout")
+        }
+    }
+
+    private fun setLoginBtn() {
+        binding.profileLoginBtn.setOnClickListener {
+            val intent = Intent(requireActivity(), LoginActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun setRegisterBtn() {
+        binding.profileRegisterBtn.setOnClickListener {
+            val intent = Intent(requireActivity(), RegisterActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun showToast(message: String) {

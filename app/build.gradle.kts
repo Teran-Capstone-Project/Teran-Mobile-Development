@@ -53,6 +53,10 @@ dependencies {
     //Glide
     implementation("com.github.bumptech.glide:glide:4.16.0")
 
+    // For Load SVG Image
+    implementation("io.coil-kt:coil:2.1.0")
+    implementation("io.coil-kt:coil-svg:2.1.0")
+
     //Room
     implementation("androidx.room:room-runtime:2.5.2")
     implementation("androidx.room:room-ktx:2.5.2")
@@ -83,4 +87,15 @@ dependencies {
     // Tensor Flow Lite
     implementation("com.google.android.gms:play-services-tflite-java:16.1.0")
     implementation("com.google.android.gms:play-services-tflite-gpu:16.2.0")
+
+    // Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
+
+    // Paging 3
+    implementation("androidx.paging:paging-runtime-ktx:3.3.0")
+
+    // Shimmer Loading
+    implementation("com.facebook.shimmer:shimmer:0.5.0")
 }
