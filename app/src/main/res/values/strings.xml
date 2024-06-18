@@ -116,6 +116,8 @@
     <string name="jadi_anonim">Jadi Anonim</string>
     <string name="komentar">Komentar</string>
     <string name="tambah_komentar">Tambah Komentar</string>
+    <string name="hello_blank_fragment">hello</string>
+    <string name="favorite">Favorite</string>
 
     <!--  ARRAY  -->
     <string-array name="umur_array">

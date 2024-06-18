@@ -1,9 +1,6 @@
 package com.example.teran.data.model
 
 import android.os.Parcelable
-import com.example.teran.data.api.response.post.CommentsItem
-import com.example.teran.data.api.response.post.User
-import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
 
 @Parcelize

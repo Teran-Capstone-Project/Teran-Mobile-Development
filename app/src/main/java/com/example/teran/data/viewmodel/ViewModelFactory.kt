@@ -3,8 +3,10 @@ package com.example.teran.data.viewmodel
 import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.example.teran.data.repository.FavoriteRepository
 import com.example.teran.ui.home_page.post.PostViewModel
 import com.example.teran.ui.home_page.post.detail.DetailPostVM
+import com.example.teran.ui.home_page.post.favorite.FavoritePostVM
 import com.example.teran.ui.journal.JournalViewModel
 
 class ViewModelFactory private constructor(private val application: Application) : ViewModelProvider.NewInstanceFactory() {
@@ -14,7 +16,8 @@ class ViewModelFactory private constructor(private val application: Application)
         private var INSTANCE: ViewModelFactory? = null
 
         @JvmStatic
-        fun getInstance(application: Application): ViewModelFactory {
+        fun getInstance(application: Application,
+                        ): ViewModelFactory {
             if (INSTANCE == null) {
                 synchronized(ViewModelFactory::class.java) {
                     INSTANCE = ViewModelFactory(application)
