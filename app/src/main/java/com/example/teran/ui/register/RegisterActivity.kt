@@ -11,7 +11,7 @@ import android.view.WindowManager
 import android.widget.Toast
 import com.example.teran.R
 import com.example.teran.data.api.ApiConfig
-import com.example.teran.data.api.request.RegisterRequest
+import com.example.teran.data.api.request.auth.RegisterRequest
 import com.example.teran.data.api.response.auth.RegisterResponse
 import com.example.teran.databinding.ActivityRegisterBinding
 import com.example.teran.ui.login.LoginActivity

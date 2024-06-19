@@ -1,4 +1,4 @@
-package com.example.teran.data.api.request
+package com.example.teran.data.api.request.post
 
 data class AddPostRequest(
     val description: String,

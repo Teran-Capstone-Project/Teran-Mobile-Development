@@ -21,6 +21,12 @@ class MySharedPreferences(context: Context) {
         editor.apply()
     }
 
+    fun updateName(newName: String) {
+        val editor = sharedPref.edit()
+        editor.putString("user_name", newName)
+        editor.apply()
+    }
+
     fun getUser(): User {
         val user = User()
         user.token = sharedPref.getString("user_token", null)

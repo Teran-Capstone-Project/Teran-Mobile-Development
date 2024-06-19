@@ -5,6 +5,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.teran.ui.home_page.post.PostViewModel
 import com.example.teran.ui.home_page.post.detail.DetailPostVM
+import com.example.teran.ui.home_page.post.favorite.PostFavoriteVM
+import com.example.teran.ui.home_page.profile.tab.mypost.MyPostViewModel
 import com.example.teran.ui.journal.JournalViewModel
 
 class ViewModelFactory private constructor(private val application: Application) : ViewModelProvider.NewInstanceFactory() {
@@ -32,6 +34,10 @@ class ViewModelFactory private constructor(private val application: Application)
             return PostViewModel(application) as T
         } else if (modelClass.isAssignableFrom(DetailPostVM::class.java)) {
             return DetailPostVM(application) as T
+        } else if (modelClass.isAssignableFrom(PostFavoriteVM::class.java)) {
+            return PostFavoriteVM(application) as T
+        } else if (modelClass.isAssignableFrom(MyPostViewModel::class.java)) {
+            return MyPostViewModel(application) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class: ${modelClass.name}")
     }

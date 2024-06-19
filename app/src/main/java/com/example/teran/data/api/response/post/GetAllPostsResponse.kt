@@ -11,7 +11,7 @@ data class GetAllPostsResponse(
 	val posts: List<PostsItem>
 )
 
-data class User(
+data class UserComment(
 
 	@field:SerializedName("profilePicture")
 	val profilePicture: String,
@@ -44,7 +44,7 @@ data class PostsItem(
 	val createdAt: String,
 
 	@field:SerializedName("comments")
-	val comments: List<Any>,
+	val comments: List<CommentsItems>,
 
 	@field:SerializedName("__v")
 	val V: Int,
@@ -65,7 +65,7 @@ data class PostsItem(
 	val anonim: Boolean
 )
 
-data class CommentsItem(
+data class CommentsItems(
 
 	@field:SerializedName("createdAt")
 	val createdAt: String,
@@ -77,7 +77,7 @@ data class CommentsItem(
 	val id: String,
 
 	@field:SerializedName("user")
-	val user: User,
+	val user: UserComment,
 
 	@field:SerializedName("content")
 	val content: String,

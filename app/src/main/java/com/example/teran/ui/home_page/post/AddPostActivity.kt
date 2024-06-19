@@ -1,21 +1,14 @@
 package com.example.teran.ui.home_page.post
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.fragment.app.FragmentActivity
-import androidx.lifecycle.ViewModelProvider
-import com.example.teran.R
 import com.example.teran.data.api.ApiConfig
-import com.example.teran.data.api.request.AddPostRequest
+import com.example.teran.data.api.request.post.AddPostRequest
 import com.example.teran.data.api.response.post.AddPostResponse
 import com.example.teran.data.sharedpref.MySharedPreferences
-import com.example.teran.data.viewmodel.ViewModelFactory
 import com.example.teran.databinding.ActivityAddPostBinding
-import com.example.teran.ui.home_page.HomePageActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -64,6 +57,7 @@ class AddPostActivity : AppCompatActivity() {
             override fun onResponse(call: Call<AddPostResponse>, response: Response<AddPostResponse>) {
                 val responseBody = response.body()
                 if (responseBody != null) {
+                    setResult(Activity.RESULT_OK)
                     finish()
                 } else {
                     println("onResponse: ${response.message()}")

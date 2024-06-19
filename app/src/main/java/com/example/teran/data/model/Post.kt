@@ -13,6 +13,7 @@ data class Post(
     var username: String,
     var profilePictureURL: String,
     var isAnonim: Boolean,
+    var userID: String,
     var commentsSize: Int,
     var date: String
 ) : Parcelable

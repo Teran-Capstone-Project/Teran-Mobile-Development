@@ -70,7 +70,7 @@
     <string name="comments">12 Comments</string>
     <string name="time">1 hour ago</string>
     <string name="arry">Arry Kusuma Putra</string>
-    <string name="name">Nama</string>
+    <string name="name">Name</string>
     <string name="enter_name">Enter your name</string>
     <string name="title_settings">Settings</string>
     <string name="theme">Theme</string>
@@ -116,6 +116,9 @@
     <string name="jadi_anonim">Jadi Anonim</string>
     <string name="komentar">Komentar</string>
     <string name="tambah_komentar">Tambah Komentar</string>
+    <string name="favorit">Favorit</string>
+    <string name="hapus">Hapus</string>
+    <string name="retry_connection">Retry Connection</string>
 
     <!--  ARRAY  -->
     <string-array name="umur_array">
@@ -198,4 +201,7 @@
         <item>3.00 - 3.49</item>
         <item>3.50 - 4.00</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="example_my_post_title">3 Post Created</string>
 </resources>

@@ -31,11 +31,11 @@ class SurveyResultActivity : AppCompatActivity() {
 
         when (isStress) {
             true -> {
-                binding.stressResultImage.setImageResource(R.drawable.stress_illustration)
+                binding.stressResultImage.setImageResource(R.drawable.illustration_stress)
                 binding.stressResultTitle.text = "Kamu mengalami stres dengan probabilitas $scoreResult%."
                 binding.stressRsultDesc.text = "Bestie, stress itu kayak monster yang suka nongol tiba-tiba, bikin kita pusing tujuh keliling. Tapi tenang, ada cara buat ngalahin monster itu! Pertama, coba deh luangin waktu buat me time, dengerin playlist favorit, atau nonton drakor yang lagi hype. Jangan lupa juga buat curhat sama bestie atau orang terdekat, biar beban di hati nggak numpuk. Olahraga juga bisa banget bantu kita ngeluarin hormon bahagia, lho! Kalo stress udah parah banget, jangan ragu buat cari bantuan profesional, ya. Inget, kesehatan mental itu penting banget, bestie! \uD83E\uDEF6✨"
             } false -> {
-                binding.stressResultImage.setImageResource(R.drawable.no_stress_illustration)
+                binding.stressResultImage.setImageResource(R.drawable.illustration_no_stress)
                 binding.stressResultTitle.text = "Kamu tidak mengalami stres dengan probabilitas $scoreResult%."
                 binding.stressRsultDesc.text = "Penting banget untuk menjaga kesehatan mental, ya! Kalau kamu ingin tetap chill dan enggak stress, coba deh cari waktu buat istirahat yang cukup. Ngelakuin hobimu juga bisa bantu banget, lho! Terus, jangan lupa jaga komunikasi yang baik sama teman-teman atau keluarga. Kadang ngobrol sama orang terdekat bisa bikin mood jadi lebih baik. Plus, olahraga atau meditasi bisa bikin pikiran jadi lebih fresh. Ingat, yang paling penting itu dengerin tubuh dan perasaanmu sendiri, ya!"
             }

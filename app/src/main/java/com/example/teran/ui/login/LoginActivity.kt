@@ -11,7 +11,7 @@ import android.view.WindowManager
 import android.widget.Toast
 import com.example.teran.R
 import com.example.teran.data.api.ApiConfig
-import com.example.teran.data.api.request.LoginRequest
+import com.example.teran.data.api.request.auth.LoginRequest
 import com.example.teran.data.api.response.auth.LoginResponse
 import com.example.teran.data.model.User
 import com.example.teran.data.sharedpref.MySharedPreferences
@@ -75,13 +75,12 @@ class LoginActivity : AppCompatActivity() {
         ).enqueue(object : Callback<LoginResponse> {
             override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                 showLoading(false)
-                println(response)
                 if (response.code() == 404) {
                     showToast("Akun Belum Terdaftar")
                     showToast("Silahkan Registrasi untuk Membuat Akun")
                 } else if (response.code() == 200) {
                     val responseBody = response.body()
-
+                    println(responseBody)
                     if (responseBody != null) {
                         sharedPref.addUser(
                             User(

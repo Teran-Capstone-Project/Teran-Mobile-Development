@@ -84,13 +84,13 @@
             app:layout_constraintTop_toTopOf="@+id/commentsSizePost" />
 
         <ImageView
-            android:id="@+id/favoritePostBtn"
+            android:id="@+id/morePostBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="@+id/usernamePost"
             app:layout_constraintEnd_toEndOf="@+id/descPost"
             app:layout_constraintTop_toTopOf="@+id/usernamePost"
-            app:srcCompat="@drawable/ic_favorite_border"
+            app:srcCompat="@drawable/ic_more_vertical"
             app:tint="@color/gray" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

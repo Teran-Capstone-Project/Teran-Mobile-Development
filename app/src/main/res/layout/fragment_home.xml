@@ -130,7 +130,7 @@
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/journal_illustration"
+                android:src="@drawable/illustration_journal"
                 android:contentDescription="@string/title_journal"
                 />
 
@@ -169,7 +169,7 @@
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/meditation_illustration"
+                android:src="@drawable/illustration_meditation"
                 android:contentDescription="@string/title_meditation"
                 />
 

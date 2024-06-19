@@ -68,6 +68,7 @@ class AddJournalActivity : AppCompatActivity() {
                         )
                     )
                     finish()
+                    showToast("Berhasil Menambahkan Jurnal")
                 }
             }
         }

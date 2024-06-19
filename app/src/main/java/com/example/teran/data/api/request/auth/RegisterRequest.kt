@@ -1,4 +1,4 @@
-package com.example.teran.data.api.request
+package com.example.teran.data.api.request.auth
 
 data class RegisterRequest(
     val email: String,

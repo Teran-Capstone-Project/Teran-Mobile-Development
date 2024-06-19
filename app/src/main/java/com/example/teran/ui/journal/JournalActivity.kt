@@ -103,8 +103,8 @@ class JournalActivity : AppCompatActivity() {
         adapter = JournalAdapter()
 
         binding.apply {
-//            journalRecyclerView.layoutManager = LinearLayoutManager(this@JournalActivity)
-            journalRecyclerView.layoutManager = StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL)
+            journalRecyclerView.layoutManager = LinearLayoutManager(this@JournalActivity)
+//            journalRecyclerView.layoutManager = StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL)
             journalRecyclerView.setHasFixedSize(true)
             journalRecyclerView.adapter = adapter
         }

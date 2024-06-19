@@ -19,8 +19,10 @@ import coil.ImageLoader
 import coil.decode.SvgDecoder
 import coil.request.ImageRequest
 import coil.request.ImageResult
+import com.example.teran.ui.home_page.profile.tab.ViewPagerProfile
 import com.example.teran.ui.login.LoginActivity
 import com.example.teran.ui.register.RegisterActivity
+import com.google.android.material.tabs.TabLayoutMediator
 
 class ProfileFragment : Fragment() {
 
@@ -42,68 +44,19 @@ class ProfileFragment : Fragment() {
 
         sharedPref = MySharedPreferences(requireActivity())
 
-        if (sharedPref.getUser().token != null) {
-            binding.displayAuth.visibility = View.VISIBLE
+        val viewPager = binding.viewPagerProfile
+        val tabLayout = binding.tabLayoutProfile
 
-            setPicture()
-            setUsername()
-            setLogoutBtn()
-        } else {
-            binding.displayGuest.visibility = View.VISIBLE
+        val adapter = ViewPagerProfile(childFragmentManager, lifecycle)
+        viewPager.adapter = adapter
 
-            setLoginBtn()
-            setRegisterBtn()
-        }
+        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+            when (position) {
+                0 -> tab.text = "Profile"
+                1 -> tab.text = "My Posts"
+            }
+        }.attach()
 
         return root
-    }
-
-    private fun setPicture() {
-        val imageLoader = ImageLoader.Builder(requireActivity())
-            .components {
-                add(SvgDecoder.Factory())
-            }
-            .build()
-
-        val imageRequest = ImageRequest.Builder(requireActivity())
-            .data(sharedPref.getUser().profilePicture)
-            .target(binding.imageProfile)
-            .build()
-
-        imageLoader.enqueue(imageRequest)
-    }
-
-    private fun setUsername() {
-        binding.nameValue.text = sharedPref.getUser().name
-    }
-
-    private fun setLogoutBtn() {
-        binding.logoutBtn.setOnClickListener {
-            sharedPref.clear()
-
-            val intent = Intent(requireActivity(), MainActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            startActivity(intent)
-
-            showToast("Berhasil Logout")
-        }
-    }
-
-    private fun setLoginBtn() {
-        binding.profileLoginBtn.setOnClickListener {
-            val intent = Intent(requireActivity(), LoginActivity::class.java)
-            startActivity(intent)
-        }
-    }
-
-    private fun setRegisterBtn() {
-        binding.profileRegisterBtn.setOnClickListener {
-            val intent = Intent(requireActivity(), RegisterActivity::class.java)
-            startActivity(intent)
-        }
-    }
-
-    private fun showToast(message: String) {
-        Toast.makeText(requireActivity(), message, Toast.LENGTH_SHORT).show()
     }
 }

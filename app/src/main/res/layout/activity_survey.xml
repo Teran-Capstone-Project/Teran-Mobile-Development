@@ -69,5 +69,5 @@
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/titleSurvey"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/survey_illustration" />
+        app:srcCompat="@drawable/illustration_survey" />
 </androidx.constraintlayout.widget.ConstraintLayout>

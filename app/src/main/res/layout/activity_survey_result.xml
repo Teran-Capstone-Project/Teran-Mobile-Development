@@ -19,7 +19,7 @@
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@drawable/stress_illustration" />
+            tools:srcCompat="@drawable/illustration_stress" />
 
         <TextView
             android:id="@+id/stressResultTitle"

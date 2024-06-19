@@ -3,6 +3,7 @@ package com.example.teran.data.helper
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
+import java.util.TimeZone
 
 object DateHelper {
     fun getCurrentDate(): String {
@@ -13,14 +14,18 @@ object DateHelper {
     }
 
     fun formatIsoToIndonesianDate(isoDate: String): String {
-        // Format dari tanggal ISO 8601
         val isoFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.getDefault())
-        isoFormat.timeZone = java.util.TimeZone.getTimeZone("UTC")
-        // Parse tanggal dari format ISO 8601
+        isoFormat.timeZone = TimeZone.getTimeZone("UTC")
         val date: Date = isoFormat.parse(isoDate)!!
-        // Format baru untuk tanggal dalam bahasa Indonesia
-        val indonesiaFormat = SimpleDateFormat("dd MMMM yyyy", Locale("id", "ID"))
-        // Format tanggal dalam bahasa Indonesia
+        val indonesiaFormat = SimpleDateFormat("EEEE, dd MMMM yyyy", Locale("id", "ID"))
+        return indonesiaFormat.format(date)
+    }
+
+    fun formatIsoToIndonesianTime(isoDate: String): String {
+        val isoFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.getDefault())
+        isoFormat.timeZone = TimeZone.getTimeZone("UTC")
+        val date: Date = isoFormat.parse(isoDate)!!
+        val indonesiaFormat = SimpleDateFormat("EEEE, dd MMMM yyyy, HH:mm", Locale("id", "ID"))
         return indonesiaFormat.format(date)
     }
 }

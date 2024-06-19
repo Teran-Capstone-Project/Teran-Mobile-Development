@@ -92,4 +92,7 @@ dependencies {
 
     // Shimmer Loading
     implementation("com.facebook.shimmer:shimmer:0.5.0")
+
+    // Swipe To Refresh
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01")
 }
