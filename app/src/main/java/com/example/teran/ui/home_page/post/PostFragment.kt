@@ -79,7 +79,7 @@ class PostFragment : Fragment(),
         if (sharedPref.getUser().token != null) {
             setHasOptionsMenu(true)
 
-            binding.displayPostAuth.visibility = View.VISIBLE
+            binding.swipeRefreshPostLayout.visibility = View.VISIBLE
 
             postViewModel.isLoading.observe(viewLifecycleOwner) {
                 showLoading(it)
@@ -95,17 +95,17 @@ class PostFragment : Fragment(),
                 startActivityForResult(intent, 1)
             }
 
+            swipeRefreshPostLayout.setOnRefreshListener {
+                postViewModel.getAllPosts(requireActivity())
+                postViewModel.isOnFailure.observe(viewLifecycleOwner) {
+                    swipeRefreshPostLayout.isRefreshing = it
+                }
+            }
+
         } else {
             binding.displayPostGuest.visibility = View.VISIBLE
             setLoginBtn()
             setRegisterBtn()
-        }
-
-        swipeRefreshPostLayout.setOnRefreshListener {
-            postViewModel.getAllPosts(requireActivity())
-            postViewModel.isOnFailure.observe(viewLifecycleOwner) {
-                swipeRefreshPostLayout.isRefreshing = it
-            }
         }
 
         return root

@@ -82,12 +82,12 @@ class MyPostViewModel(val context: Context) : ViewModel() {
             ) {
                 if (response.isSuccessful) {
                     getAllMyPosts()
-                    showToast("Berhasil Mnghapus Postingan", context)
+                    showToast("Berhasil Menghapus Postingan", context)
                 }
             }
 
             override fun onFailure(call: Call<DeletePostResponse>, t: Throwable) {
-                showToast("Gagal Mnghapus Postingan", context)
+                showToast("Gagal Menghapus Postingan", context)
             }
 
         })

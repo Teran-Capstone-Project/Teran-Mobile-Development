@@ -40,8 +40,8 @@ class LoginActivity : AppCompatActivity() {
         setupEmail()
         setupPassword()
 
-        binding.emailEdtText.setText("tester@gmail.com")
-        binding.passwordEdtText.setText("password123")
+//        binding.emailEdtText.setText("tester@gmail.com")
+//        binding.passwordEdtText.setText("password123")
 
         binding.registerLink.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)

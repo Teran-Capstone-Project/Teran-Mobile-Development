@@ -42,6 +42,10 @@ class MyPostAdapter(
                 commentsSizePost.text = "${post.commentsSize} Comments"
                 datePost.text = formatIsoToIndonesianDate(post.date)
 
+                usernamePost.setOnClickListener {
+                    println(post)
+                }
+
                 morePostBtn.setOnClickListener {
                     bottomSheetDialog.onBottomSheetDialogClick(post)
                     true

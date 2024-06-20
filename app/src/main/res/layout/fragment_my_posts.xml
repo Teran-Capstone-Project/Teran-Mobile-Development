@@ -56,5 +56,4 @@
                 tools:listitem="@layout/item_post"/>
         </LinearLayout>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-
 </FrameLayout>

@@ -7,57 +7,7 @@
     tools:context=".ui.home_page.profile.tab.myprofile.MyProfileFragment"
     android:orientation="vertical">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:visibility="gone"
-        android:id="@+id/displayGuest"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:gravity="center"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="16dp">
-
-            <ImageView
-                android:layout_width="250dp"
-                android:layout_height="250dp"
-                android:src="@drawable/illustration_signup" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/login_dulu_yuk"
-                android:textColor="@color/orange"
-                android:textSize="28sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/profileLoginBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:text="@string/login" />
-
-            <Button
-                android:id="@+id/profileRegisterBtn"
-                style="@style/StrokeBorderGrayButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/register" />
-        </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
     <LinearLayout
-        android:visibility="gone"
-        android:id="@+id/displayAuth"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">

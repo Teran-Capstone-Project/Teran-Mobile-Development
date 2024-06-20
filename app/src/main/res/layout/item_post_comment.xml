@@ -14,8 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingHorizontal="16dp"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp">
+        android:paddingTop="16dp">
 
         <ImageView
             android:id="@+id/profilePicturePostComment"
@@ -63,6 +62,7 @@
             android:layout_marginTop="8dp"
             android:background="@color/stroke_border_gray"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/datePostComment"
             app:layout_constraintStart_toStartOf="@+id/datePostComment"
             app:layout_constraintTop_toBottomOf="@+id/datePostComment" />
     </androidx.constraintlayout.widget.ConstraintLayout>

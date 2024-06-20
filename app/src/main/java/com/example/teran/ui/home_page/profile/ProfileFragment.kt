@@ -44,19 +44,40 @@ class ProfileFragment : Fragment() {
 
         sharedPref = MySharedPreferences(requireActivity())
 
-        val viewPager = binding.viewPagerProfile
-        val tabLayout = binding.tabLayoutProfile
+        if (sharedPref.getUser().token != null) {
+            binding.displayAuth.visibility = View.VISIBLE
+            val viewPager = binding.viewPagerProfile
+            val tabLayout = binding.tabLayoutProfile
 
-        val adapter = ViewPagerProfile(childFragmentManager, lifecycle)
-        viewPager.adapter = adapter
+            val adapter = ViewPagerProfile(childFragmentManager, lifecycle)
+            viewPager.adapter = adapter
 
-        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
-            when (position) {
-                0 -> tab.text = "Profile"
-                1 -> tab.text = "My Posts"
-            }
-        }.attach()
+            TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+                when (position) {
+                    0 -> tab.text = "Profile"
+                    1 -> tab.text = "My Posts"
+                }
+            }.attach()
+        } else {
+            binding.displayGuest.visibility = View.VISIBLE
+            setLoginBtn()
+            setRegisterBtn()
+        }
 
         return root
+    }
+
+    private fun setLoginBtn() {
+        binding.profileLoginBtn.setOnClickListener {
+            val intent = Intent(requireActivity(), LoginActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun setRegisterBtn() {
+        binding.profileRegisterBtn.setOnClickListener {
+            val intent = Intent(requireActivity(), RegisterActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

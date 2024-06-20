@@ -58,7 +58,7 @@ class MyPostsFragment : Fragment(), MyPostAdapter.OnItemClickListener, MyPostAda
         myPostViewModel.getAllMyPosts()
         myPostViewModel.myPosts.observe(viewLifecycleOwner) {
             setRecyclerView(it)
-            binding.myPostsTitle.text = "${it.size.toString()} Posts Created"
+            binding.myPostsTitle.text = "${it.size} Posts Created"
             println(it)
         }
 
@@ -80,7 +80,6 @@ class MyPostsFragment : Fragment(), MyPostAdapter.OnItemClickListener, MyPostAda
         if (isLoading) {
             binding.shimmerLoadingPosts.startShimmer()
         } else {
-            requireActivity().window.clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE)
             binding.shimmerLoadingPosts.stopShimmer()
             binding.shimmerLoadingPosts.visibility = View.GONE
             binding.rvMyPosts.visibility = View.VISIBLE
@@ -88,9 +87,9 @@ class MyPostsFragment : Fragment(), MyPostAdapter.OnItemClickListener, MyPostAda
     }
 
     private fun setRecyclerView(listMyPosts: ArrayList<Post>) {
+        listMyPosts.reverse()
         rvMyPosts.layoutManager = LinearLayoutManager(requireActivity())
         rvMyPosts.adapter = MyPostAdapter(listMyPosts, requireActivity(), this, this)
-
     }
 
     private fun obtainViewModel(activity: FragmentActivity): MyPostViewModel {

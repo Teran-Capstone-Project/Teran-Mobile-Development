@@ -7,37 +7,76 @@
     android:layout_height="match_parent"
     tools:context=".ui.survey.SurveyResultActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="16dp">
 
         <ImageView
             android:id="@+id/stressResultImage"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             tools:srcCompat="@drawable/illustration_stress" />
 
         <TextView
             android:id="@+id/stressResultTitle"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
             android:textColor="@color/orange"
             android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/stressResultImage"
-            app:layout_constraintTop_toBottomOf="@+id/stressResultImage"
             tools:text="Kamu mengalami stress dengan probabilitas 97%" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp">
+            <TableRow
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:background="@color/orange">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pertanyaan"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Jawaban"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"
+                    android:textStyle="bold"/>
+            </TableRow>
+            <TableRow
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:background="@color/stroke_border_gray">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pertanyaan"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Jawaban"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    android:textStyle="bold"/>
+            </TableRow>
+        </TableLayout>
 
         <TextView
             android:id="@+id/stressRsultDesc"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:textSize="16sp"
@@ -48,7 +87,7 @@
 
         <Button
             android:id="@+id/surveyResultFinishBtn"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="24dp"
@@ -57,5 +96,5 @@
             app:layout_constraintEnd_toEndOf="@+id/stressRsultDesc"
             app:layout_constraintStart_toStartOf="@+id/stressRsultDesc"
             app:layout_constraintTop_toBottomOf="@+id/stressRsultDesc" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </ScrollView>

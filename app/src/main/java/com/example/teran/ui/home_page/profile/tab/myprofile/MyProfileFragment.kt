@@ -47,17 +47,10 @@ class MyProfileFragment : Fragment() {
 
         setData()
 
-        if (sharedPref.getUser().token != null) {
-            binding.displayAuth.visibility = View.VISIBLE
-            setPicture()
-            setUsernameAndEmail()
-            setLogoutBtn()
-            setNameCard()
-        } else {
-            binding.displayGuest.visibility = View.VISIBLE
-            setLoginBtn()
-            setRegisterBtn()
-        }
+        setPicture()
+        setUsernameAndEmail()
+        setLogoutBtn()
+        setNameCard()
 
         return root
     }
@@ -138,20 +131,6 @@ class MyProfileFragment : Fragment() {
             startActivity(intent)
 
             showToast("Berhasil Logout")
-        }
-    }
-
-    private fun setLoginBtn() {
-        binding.profileLoginBtn.setOnClickListener {
-            val intent = Intent(requireActivity(), LoginActivity::class.java)
-            startActivity(intent)
-        }
-    }
-
-    private fun setRegisterBtn() {
-        binding.profileRegisterBtn.setOnClickListener {
-            val intent = Intent(requireActivity(), RegisterActivity::class.java)
-            startActivity(intent)
         }
     }
 

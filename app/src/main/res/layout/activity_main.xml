@@ -6,15 +6,63 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.MainActivity">
 
-    <ImageView
-        android:id="@+id/teranLogo"
-        android:layout_width="0dp"
-        android:layout_height="80dp"
-        android:src="@drawable/logo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/mainViewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/btnToGuest">
+
+        <TextView
+            android:id="@+id/dotSlide1"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text="•"
+            android:textAlignment="center"
+            android:textColor="@color/orange"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dotSlide2"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text="•"
+            android:textAlignment="center"
+            android:textColor="@color/shimmer"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dotSlide3"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text="•"
+            android:textAlignment="center"
+            android:textColor="@color/shimmer"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dotSlide4"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text="•"
+            android:textAlignment="center"
+            android:textColor="@color/shimmer"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
         style="@style/StrokeBorderGrayButton"
