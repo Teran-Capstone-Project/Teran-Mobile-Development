@@ -14,7 +14,7 @@ class ApiConfig {
                 .addInterceptor(loggingInterceptor)
                 .build()
             val retrofit = Retrofit.Builder()
-                .baseUrl("https://teran-426305.et.r.appspot.com/")
+                .baseUrl("https://teran-cloud-computing.vercel.app/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()
